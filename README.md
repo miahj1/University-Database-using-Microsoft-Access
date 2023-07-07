@@ -12,10 +12,10 @@ The entity relationship diagram and the relational schema are developed in LaTeX
 I cannot share the code for the ERD because I by mistake over-wrote the original code.
 
 The entity relationship diagram for the project.
-![image](https://github.com/miahj1/University-Database-using-Microsoft-Access/assets/84815985/28636e43-d02d-49fe-b98f-3c794b84d92f)
+![image](https://github.com/miahj1/University-Database-using-Microsoft-Access/assets/84815985/e4b125a5-4254-42ab-96a5-3283ee5208c0)
 
 The relational schema for the project.
 
-![image](https://github.com/miahj1/University-Database-using-Microsoft-Access/assets/84815985/3c469106-9233-481f-a767-c720b1a2fd38)
+![image](https://github.com/miahj1/University-Database-using-Microsoft-Access/assets/84815985/c4ded4e8-302a-471f-94a1-e6157fce3ab3)
 
 
