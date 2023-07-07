@@ -7,4 +7,5 @@ The process for making this database is described as follows:
 - Addedrandomly generated data into the database.
 - Developed SQL queries to fetch data concerning . . . 
 
-The entity relationship diagram and the relational scheme were developed in LaTeX.
+The entity relationship diagram and the relational schema are developed in LaTeX.
+I cannot share the code for the ERD because I by mistake over-wrote the original code.
