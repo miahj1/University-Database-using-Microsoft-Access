@@ -33,7 +33,7 @@ The fact and dimension table implemented in Microsoft Access, Fig. 3.
 
 Here are 5 SQL queries I ran on the data.
 
-Query #1: We want the name of the student, their major and their minor.
+<strong>Query #1:</strong> We want the name of the student, their major and their minor.
 
 ```sql
 SELECT student.ssn, student.fname AS [first name], student.lname AS [last name], minor.code AS minor, major.code AS major
@@ -41,7 +41,7 @@ FROM (Student LEFT JOIN Minor ON student.ssn = minor.ssn) LEFT JOIN major ON stu
 ```
 ![query1_output](https://github.com/miahj1/University-Database-using-Microsoft-Access/assets/84815985/0c73d7f5-88fc-4b55-acae-871b534f0b39)
 
-Query #2: Which professor is teaching what course and section i.e., `CS5000-080` in the Fall semester.
+<strong>Query #2:</strong> Which professor is teaching what course and section e.g., `CS5000-080` in the Fall semester.
 ```sql
 SELECT ssn, iname AS name, course.number & '-' & section.number AS [course-section]
 FROM Instructor, Course, [Section], Teaches
@@ -52,3 +52,32 @@ AND section.semester = 'Fall';
 ```
 ![query2_output](https://github.com/miahj1/University-Database-using-Microsoft-Access/assets/84815985/53612aab-6a0a-4c1f-aa68-79d49b51c667)
 
+<strong>Query #3:</strong> Table of computer science majoring students that are enrolled in `CS4400` including their degree and class rank.
+```sql
+SELECT student.ssn AS ssn, fname AS [first name], lname AS [last name], program AS [degree program], class, code AS major
+FROM Student, Enrolls, Major, Course, [Section]
+WHERE student.ssn = major.ssn
+AND student.ssn = enrolls.ssn
+AND enrolls.snumber = section.number
+AND course.number = cnumber
+AND cnumber = '4400'
+AND dcode = 'CS';
+```
+![query3_output](https://github.com/miahj1/University-Database-using-Microsoft-Access/assets/84815985/6158658a-fce1-4fe8-abb0-8827afdbda58)
+
+<strong>Query #4:</strong> List of pre-requisites for all courses offered in the university.
+```sql
+SELECT Course.number AS [course number], Course.coursename AS [course name], Course_Prerequisite.prerequisite AS [pre-requisite], Course.offering_dept AS [department name]
+FROM Course LEFT JOIN Course_Prerequisite ON Course.number = Course_Prerequisite.Number;
+```
+![query4_output](https://github.com/miahj1/University-Database-using-Microsoft-Access/assets/84815985/f11e8453-91b5-4915-b00d-ee32782cd68c)
+
+<strong>Query #5:</strong> Sum of students that are majoring in each major offered by the college.
+```sql
+SELECT count(student.ssn) AS students, major.code AS major
+FROM Student, Major
+WHERE student.ssn = major.ssn
+GROUP BY major.code
+ORDER BY count(student.ssn);
+```
+![query5_output](https://github.com/miahj1/University-Database-using-Microsoft-Access/assets/84815985/cb490a49-d717-4c3e-a5fe-293b550e7470)
