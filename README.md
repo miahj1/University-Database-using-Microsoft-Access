@@ -6,7 +6,7 @@ The process for making this database is described as follows:
 - Developed the entity relationship diagram and relational schema in LaTeX using the TiKZ `er` package. 
 - Implemented the entity relationship diagram and relational schema in Microsoft Access.
 - Manually added randomly generated data into the database.
-- Developed SQL queries to fetch data concerning student's major and minor including another table fetching all the pre-requisites offered by the university using LEFT JOIN, courses including sections professors are teaching and a specific courses students majoring in CS are taking using AND and WHERE clause, use aggregate function COUNT, GROUP BY and ORDER BY to get a count of all the students and their majors at the college.
+- Developed SQL queries to fetch data concerning student's major and minor (LEFT JOIN), all the pre-requisites offered by the university (LEFT JOIN), courses including sections professors are teaching and a specific courses students majoring in CS are taking using AND and WHERE clause, use aggregate function COUNT, GROUP BY, and ORDER BY to create table count of all the students and their majors at the college.
 
 The entity relationship diagram and the relational schema are developed in LaTeX.
 I cannot share the code for the ERD because I by mistake over-wrote the original code.
