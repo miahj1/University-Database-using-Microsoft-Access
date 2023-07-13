@@ -1,5 +1,6 @@
 # University Database using Microsoft Access
-A relational database made in Access which is used for structuring randomly generated student data. 
+A relational database made in Access which is used for structuring randomly generated data for a university system.
+
 The process for making this database is described as follows:
 - Created relationships and constraints using an Entity Relationship Diagram.
 - Created a relational schema to meet the business needs of the theoretical university.
