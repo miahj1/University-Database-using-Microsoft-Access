@@ -72,7 +72,7 @@ FROM Course LEFT JOIN Course_Prerequisite ON Course.number = Course_Prerequisite
 ```
 ![query4_output](https://github.com/miahj1/University-Database-using-Microsoft-Access/assets/84815985/f11e8453-91b5-4915-b00d-ee32782cd68c)
 
-<strong>Query #5:</strong> Sum of students that are majoring in each major offered by the college.
+<strong>Query #5:</strong> A count of the students that are majoring in each major offered by the college.
 ```sql
 SELECT count(student.ssn) AS students, major.code AS major
 FROM Student, Major
